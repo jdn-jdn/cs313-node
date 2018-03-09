@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mail Rate Form</title>
+</head>
+<body>
+	<!-- 
+	This form allows a user to specify 1) the weight of the item and then 2) select one of the following types of mail:
+		- Letters (Stamped)
+		- Letters (Metered)
+		- Large Envelopes (Flats)
+		- Parcels 
+	-->
+	<form action="/getRate" method="get">
+
+		<label for="weight">Weight of the item in ounces:</label> 
+		<input type="text" name="weight" id="weight" placeholder="e.g. 3.5"> 
+
+		</br></br>
+  		<label for="mail_type">Type of mail:</label>
+		<select name="mail_type" id="mail_type">
+			<option value="letters_stamped">
+				Letters (Stamped)
+			</option>
+			<option value="letters_metered">
+				Letters (Metered)
+			</option>
+			<option value="large">
+				Large Envelopes(Flats)
+			</option>
+			<option value="retail">
+				First-Class Package Service—Retail
+			</option>
+		</select> 
+
+		</br></br>
+		<input type="submit" name="submit" value="Get rate">
+
+	</form>
+</body>
+</html>
